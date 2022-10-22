@@ -19,23 +19,8 @@ type AligoResponse struct {
 	Message     string `json:"message"`
 }
 
-func NewApiData() AligoApiData {
-	var obj AligoApiData
-	obj.Key = "a"
-	obj.User_id = "b"
-	obj.Sender = "c"
-	obj.Receiver = "d"
-	obj.Msg = "e"
-	obj.Msg_type = "f"
-	obj.Title = "g"
-	obj.Destination = "h"
-	obj.Rdate = "i"
-	obj.Rtime = "j"
-	obj.Testmode_yn = "k"
-
-	return obj
-}
-
-func NewResponseData() AligoResponse {
-	return AligoResponse{}
+type AligoMessage struct {
+	Receiver string
+	Title    string
+	Msg      string
 }
